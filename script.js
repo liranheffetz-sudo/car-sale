@@ -1,21 +1,21 @@
 const slides = [
   {
-    src: "./assets/car-front-2.jpg,
+    src: "./car-front-2.jpg,
     alt: "מבט קדמי על הרכב",
     label: "מבט חיצוני קדמי",
   },
   {
-    src: "./assets/car-side-2.jpg",
+    src: "./car-side-2.jpg",
     alt: "מבט צד על הרכב",
     label: "מבט צד נקי",
   },
   {
-    src: "./assets/car-interior-2.jpg",
+    src: "./car-interior-2.jpg",
     alt: "מבט אחורי של הרכב",
     label: "מבט אחורי של הרכב",
   },
   {
-    src: "./assets/car-dashboard-2.jpg",
+    src: "./car-dashboard-2.jpg",
     alt: "מבט צד של הרכב",
     label: "מבט צד של הרכ",
   },
