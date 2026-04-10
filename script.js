@@ -1,23 +1,23 @@
 const slides = [
   {
-    src: "./car-front-2.jpg",
+    src: "/car-sale/car-front-2.jpg",
     alt: "מבט קדמי על הרכב",
     label: "מבט חיצוני קדמי",
   },
   {
-    src: "./car-side-2.jpg",
+    src: "/car-sale/car-side-2.jpg",
     alt: "מבט צד על הרכב",
     label: "מבט צד נקי",
   },
   {
-    src: "./car-interior-2.jpg",
-    alt: "מבט אחורי של הרכב",
-    label: "מבט אחורי של הרכב",
+    src: "/car-sale/car-interior-2.jpg",
+    alt: "תא נוסעים שמור",
+    label: "תא נוסעים שמור",
   },
   {
-    src: "./car-dashboard-2.jpg",
-    alt: "מבט צד של הרכב",
-    label: "מבט צד של הרכב",
+    src: "/car-sale/car-dashboard-2.jpg",
+    alt: "לוח מחוונים",
+    label: "לוח מחוונים",
   },
 ];
 
@@ -46,9 +46,9 @@ function renderDots() {
   slides.forEach((slide, index) => {
     const dot = document.createElement("button");
     dot.type = "button";
-    dot.className = `carousel-dot${index === activeIndex ? " is-active" : ""}`;
-    dot.setAttribute("aria-label", `עבור לתמונה ${index + 1}`);
-    dot.addEventListener("click", () => {
+    dot.className = "carousel-dot" + (index === activeIndex ? " is-active" : "");
+    dot.setAttribute("aria-label", "עבור לתמונה " + (index + 1));
+    dot.addEventListener("click", function () {
       setActiveIndex(index);
       restartRotation();
     });
@@ -62,7 +62,7 @@ function renderGallery() {
   slides.forEach((slide, index) => {
     const button = document.createElement("button");
     button.type = "button";
-    button.className = `gallery-button${index === 0 ? " is-large" : ""}`;
+    button.className = "gallery-button" + (index === 0 ? " is-large" : "");
     button.setAttribute("aria-label", slide.label);
 
     const image = document.createElement("img");
@@ -75,16 +75,19 @@ function renderGallery() {
     caption.textContent = slide.label;
 
     button.append(image, caption);
-    button.addEventListener("click", () => openLightbox(index));
+    button.addEventListener("click", function () {
+      openLightbox(index);
+    });
+
     galleryGrid.appendChild(button);
   });
 }
 
 function renderActiveSlide() {
   const slide = slides[activeIndex];
-  stage.style.backgroundImage = `url("${slide.src}")`;
+  stage.style.backgroundImage = 'url("' + slide.src + '")';
   slideLabel.textContent = slide.label;
-  slideCounter.textContent = `${activeIndex + 1}/${slides.length}`;
+  slideCounter.textContent = activeIndex + 1 + "/" + slides.length;
   renderDots();
 }
 
@@ -99,7 +102,7 @@ function openLightbox(index) {
   lightboxImage.src = slide.src;
   lightboxImage.alt = slide.alt;
   lightboxLabel.textContent = slide.label;
-  lightboxCounter.textContent = `${activeIndex + 1}/${slides.length}`;
+  lightboxCounter.textContent = activeIndex + 1 + "/" + slides.length;
   lightbox.showModal();
 }
 
@@ -109,29 +112,39 @@ function closeLightbox() {
 
 function restartRotation() {
   window.clearInterval(autoRotateId);
-  autoRotateId = window.setInterval(() => {
+  autoRotateId = window.setInterval(function () {
     setActiveIndex(activeIndex + 1);
   }, 4800);
 }
 
-prevButton.addEventListener("click", () => {
+prevButton.addEventListener("click", function () {
   setActiveIndex(activeIndex - 1);
   restartRotation();
 });
 
-nextButton.addEventListener("click", () => {
+nextButton.addEventListener("click", function () {
   setActiveIndex(activeIndex + 1);
   restartRotation();
 });
 
-openLightboxButton.addEventListener("click", () => openLightbox(activeIndex));
-closeLightboxButton.addEventListener("click", closeLightbox);
-lightboxPrev.addEventListener("click", () => openLightbox(activeIndex - 1));
-lightboxNext.addEventListener("click", () => openLightbox(activeIndex + 1));
+openLightboxButton.addEventListener("click", function () {
+  openLightbox(activeIndex);
+});
 
-lightbox.addEventListener("click", (event) => {
+closeLightboxButton.addEventListener("click", closeLightbox);
+
+lightboxPrev.addEventListener("click", function () {
+  openLightbox(activeIndex - 1);
+});
+
+lightboxNext.addEventListener("click", function () {
+  openLightbox(activeIndex + 1);
+});
+
+lightbox.addEventListener("click", function (event) {
   const card = lightbox.querySelector(".lightbox-card");
   const rect = card.getBoundingClientRect();
+
   const clickedInside =
     event.clientX >= rect.left &&
     event.clientX <= rect.right &&
@@ -143,7 +156,7 @@ lightbox.addEventListener("click", (event) => {
   }
 });
 
-document.addEventListener("keydown", (event) => {
+document.addEventListener("keydown", function (event) {
   if (!lightbox.open) {
     return;
   }
