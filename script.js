@@ -1,6 +1,6 @@
 const slides = [
   {
-    src: "./car-front-2.jpg,
+    src: "./car-front-2.jpg",
     alt: "מבט קדמי על הרכב",
     label: "מבט חיצוני קדמי",
   },
