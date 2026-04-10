@@ -17,7 +17,7 @@ const slides = [
   {
     src: "./car-dashboard-2.jpg",
     alt: "מבט צד של הרכב",
-    label: "מבט צד של הרכ",
+    label: "מבט צד של הרכב",
   },
 ];
 
