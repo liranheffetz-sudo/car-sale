@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>הרכב הזה יכול להיות שלך</title>
+    <meta
+      name="description"
+      content="דף נחיתה מובייל-פירסט למכירת רכב פרטי עם CTA מהיר לוואטסאפ."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="hero-badges">
+            <span class="pill">רכב פרטי</span>
+            <span class="pill pill-success">זמין למענה מיידי</span>
+          </div>
+          <p class="eyebrow">מודעה מהירה וברורה</p>
+          <h1>הרכב הזה יכול להיות שלך 🚗</h1>
+          <p class="subheadline">שמורה, אמינה, מוכנה לנסיעה</p>
+
+          <div class="hero-stats">
+            <article class="stat-card">
+              <span>מחיר</span>
+              <strong>₪89,900</strong>
+            </article>
+            <article class="stat-card">
+              <span>שנה</span>
+              <strong>2020</strong>
+            </article>
+            <article class="stat-card">
+              <span>ק"מ</span>
+              <strong>88,000</strong>
+            </article>
+          </div>
+
+          <div class="cta-row">
+            <a class="button button-primary" href="https://wa.me/<PHONE_NUMBER>" target="_blank" rel="noreferrer">
+              <span class="icon-circle">W</span>
+              שלח הודעה בוואטסאפ
+            </a>
+            <a class="button button-secondary" href="#details">צפה בפרטים</a>
+          </div>
+
+          <div class="quick-facts">
+            <article class="fact-card">
+              <span>מוכר פרטי</span>
+              <strong>לא סוחר</strong>
+            </article>
+            <article class="fact-card">
+              <span>זמינה עכשיו</span>
+              <strong>לבדיקה</strong>
+            </article>
+            <article class="fact-card">
+              <span>מענה מהיר</span>
+              <strong>בוואטסאפ</strong>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="carousel-card">
+            <div class="carousel-topbar">
+              <span class="slide-label" id="slide-label">מבט חיצוני קדמי</span>
+              <span class="slide-counter" id="slide-counter">1/4</span>
+            </div>
+            <div class="carousel-stage" id="carousel-stage">
+              <button class="stage-hitbox" id="open-lightbox" type="button" aria-label="פתח תצוגה מוגדלת של תמונת הרכב"></button>
+              <div class="carousel-overlay">
+                <strong>מבט מהיר על הרכב</strong>
+                <span>לחיצה על התמונה תפתח גלריה מלאה</span>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <div class="carousel-dots" id="carousel-dots"></div>
+              <div class="carousel-arrows">
+                <button class="arrow-button" id="prev-slide" type="button" aria-label="תמונה קודמת">‹</button>
+                <button class="arrow-button" id="next-slide" type="button" aria-label="תמונה הבאה">›</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="details-section" id="details">
+        <div class="section-heading">
+          <p class="eyebrow">פרטים חשובים</p>
+          <h2>כל המידע שאתה צריך במבט אחד</h2>
+        </div>
+        <div class="details-grid">
+          <article class="detail-card"><span>שנה</span><strong>2020</strong></article>
+          <article class="detail-card"><span>דגם</span><strong>Toyota Corolla</strong></article>
+          <article class="detail-card"><span>ק"מ</span><strong>88,000</strong></article>
+          <article class="detail-card"><span>יד</span><strong>02</strong></article>
+          <article class="detail-card"><span>מנוע</span><strong>1.8 היברידי</strong></article>
+          <article class="detail-card"><span>גיר</span><strong>אוטומט</strong></article>
+          <article class="detail-card"><span>טסט</span><strong>עד 12/2026</strong></article>
+          <article class="detail-card"><span>מחיר</span><strong>₪89,900</strong></article>
+        </div>
+      </section>
+
+      <section class="reasons-section">
+        <div class="section-heading">
+          <p class="eyebrow">למה דווקא הרכב הזה</p>
+          <h2>מעט טקסט, מקסימום בהירות</h2>
+        </div>
+        <div class="reasons-grid">
+          <article class="reason-card"><span>✓</span><p>חסכונית ונעימה לנסיעות עירוניות ובין-עירוניות</p></article>
+          <article class="reason-card"><span>✓</span><p>ללא תאונות, שמורה ונקייה מאוד</p></article>
+          <article class="reason-card"><span>✓</span><p>טיפולים בזמן עם תחזוקה מסודרת</p></article>
+          <article class="reason-card"><span>✓</span><p>מוכנה למסירה ולנסיעה מיידית</p></article>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallery">
+        <div class="section-heading">
+          <p class="eyebrow">גלריה</p>
+          <h2>פנים, חוץ ולוח מחוונים</h2>
+        </div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </section>
+
+      <section class="trust-section">
+        <div class="trust-card">
+          <p class="eyebrow">אמון ושקיפות</p>
+          <h2>הרכב היה בשימוש פרטי, נשמר בקפדנות</h2>
+          <p>
+            הרכב שימש אותי ביום-יום ונשמר בקפדנות. אם חשוב לך לקנות בראש שקט,
+            אשמח לשלוח עוד תמונות, סרטון וכל פרט רלוונטי.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-card">
+          <div class="contact-copy">
+            <p class="eyebrow">יצירת קשר</p>
+            <h2>רוצה לבדוק, לשאול או לקבוע לראות את הרכב?</h2>
+            <p>
+              שלח הודעה בוואטסאפ ותקבל תשובה מהירה עם עוד תמונות, פרטים ותיאום.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button button-primary" href="https://wa.me/<PHONE_NUMBER>" target="_blank" rel="noreferrer">
+              <span class="icon-circle">W</span>
+              דבר איתי עכשיו
+            </a>
+            <div class="contact-inline">
+              <a class="phone-link" href="tel:<PHONE_NUMBER>"><PHONE_NUMBER></a>
+              <a class="instagram-link" href="https://instagram.com/<INSTAGRAM_HANDLE>" target="_blank" rel="noreferrer" aria-label="Instagram">IG</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="sticky-footer">
+      <div class="sticky-copy">
+        <span>מוכן ליצירת קשר</span>
+        <strong>לפרטים מהירים בוואטסאפ</strong>
+      </div>
+      <a class="button button-primary button-small" href="https://wa.me/<PHONE_NUMBER>" target="_blank" rel="noreferrer">
+        <span class="icon-circle">W</span>
+        שלח הודעה בוואטסאפ
+      </a>
+    </div>
+
+    <dialog class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="close-lightbox" type="button" aria-label="סגור">×</button>
+      <button class="lightbox-arrow lightbox-arrow-right" id="lightbox-prev" type="button" aria-label="הקודם">‹</button>
+      <div class="lightbox-card">
+        <img id="lightbox-image" alt="" />
+        <div class="lightbox-meta">
+          <strong id="lightbox-label"></strong>
+          <span id="lightbox-counter"></span>
+        </div>
+      </div>
+      <button class="lightbox-arrow lightbox-arrow-left" id="lightbox-next" type="button" aria-label="הבא">›</button>
+    </dialog>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
