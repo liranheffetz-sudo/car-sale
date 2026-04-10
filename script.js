@@ -1,23 +1,23 @@
 const slides = [
   {
-    src: "./assets/car-front.svg",
+    src: "./assets/car-front-2.jpg,
     alt: "מבט קדמי על הרכב",
     label: "מבט חיצוני קדמי",
   },
   {
-    src: "./assets/car-side.svg",
+    src: "./assets/car-side-2.jpg",
     alt: "מבט צד על הרכב",
     label: "מבט צד נקי",
   },
   {
-    src: "./assets/car-interior.svg",
-    alt: "תא הנוסעים של הרכב",
-    label: "תא נוסעים שמור",
+    src: "./assets/car-interior-2.jpg",
+    alt: "מבט אחורי של הרכב",
+    label: "מבט אחורי של הרכב",
   },
   {
-    src: "./assets/car-dashboard.svg",
-    alt: "לוח מחוונים של הרכב",
-    label: "לוח מחוונים ברור",
+    src: "./assets/car-dashboard-2.jpg",
+    alt: "מבט צד של הרכב",
+    label: "מבט צד של הרכ",
   },
 ];
 
